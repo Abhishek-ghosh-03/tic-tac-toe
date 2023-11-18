@@ -30,6 +30,7 @@ function boxClicked(e) {
 
             winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator)
             removeClickListeners()
+            return
         }
 
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
@@ -71,6 +72,7 @@ function restart() {
     playerText.innerHTML = 'Tic Tac Toe'
 
     currentPlayer = X_TEXT
+    startGame()
 }
 
 startGame()
