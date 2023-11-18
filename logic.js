@@ -32,19 +32,10 @@ function boxClicked(e) {
             removeClickListeners()
             return
         }
-        else if(isDraw)
-        {
-            playerText.innerHTML = `Draw`
-            removeClickListeners()
-        }
-        else
-        {
+        
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
-        }
+        
     }
-}
-function isDraw() {
-    return spaces.every(space => space !== null);
 }
 const winningCombos = [
     [0,1,2],
