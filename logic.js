@@ -32,6 +32,10 @@ function boxClicked(e) {
             removeClickListeners()
             return
         }
+        else
+        {
+            playerText.innerHTML = `Draw`
+        }
 
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
     }
