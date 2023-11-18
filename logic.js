@@ -32,10 +32,21 @@ function boxClicked(e) {
             removeClickListeners()
             return
         }
-        
-        currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
+        else
+            if(draw())
+            {
+                playerText.innerHTML  = `draw`
+                removeClickListeners()
+            }
+        else
+            {
+                currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
+            }
         
     }
+}
+function draw(){
+    return spaces.every(space => space!== null)
 }
 const winningCombos = [
     [0,1,2],
